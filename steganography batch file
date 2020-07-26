@@ -1,0 +1,36 @@
+//just import this into your .bashrc file to use these functions
+//you need https://pypi.org/project/steganography/ installed for this to work
+//to install it just type "pip install steganography" in the terminal
+//these functions can batch encrypt and decrypt images with texts
+
+steg_decrypt_loop(){
+
+for img in $1/*
+do steganography -d $img
+ done
+
+}
+
+
+steg_encrypt_loop(){
+
+input="/home/ghalib/test/strings"
+output="/home/ghalib/test/output/"
+location="//home/ghalib/test/input/*"
+
+//i had to place the images input location at the end because it was meddling with the inputs 
+input=$1
+output=$2
+location=$3
+count=0
+#echo "location $location* output $output text $input" 
+for img in $location*
+do
+  read line
+  count=$((${count}+1))
+
+  echo "writing" \"$line\" "to image" $img" and saving it to "${output}$(printf "%02d" $count)
+  steganography "-e" "$img" "$output$(printf "%02d" $count)"  "$line"
+
+done < "$input"
+}
