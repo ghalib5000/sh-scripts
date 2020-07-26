@@ -1,0 +1,45 @@
+cd ~ to go to home
+pwd to see the current path
+cd .. to go back one folder
+mv to move
+cp to copy
+~ is for  home
+cat used for seeing what's inside of a text file in the terminal
+chmod used for adding/removing permissions
+	-x for not executable
+	+x for executable
+chown to change ownership of folder/file
+	chown user:group filename
+rm -Rf to delete folders (R for folders and f for force delete)
+| more at the end of command to see list from start
+	ex  ls -al | more
+ZZ to get out
+man [command] for detailed info on a command(manual)
+clear to clear the screen
+history to see last commands
+!line number/command to run the specific historic command
+echo to echo the thing
+	echo $SHELL to see the current shell being used
+systemctl to enable/disable starup items
+	systemctl list-unit-files to view a list of startup items
+	systemctl list-unit-files | grep enabled to view a list of enabled startup items
+| grep [specify] to grab only the specified things
+df to see mounted drives
+
+du -sch ~/Downloads/* to see total size of each folder
+
+| sort -n -r | less code to sort 
+tar -cvzf filename.tar.gz file_or_folder  (create, verboze , zip , file) for making tar file
+tar -xvf filename.tar.gz to extract file (extract , verbose , files)
+
+scp command to tranfers files     
+    -P - Specifies the remote host ssh port.
+    -p - Preserves files modification and access times.
+    -q - Use this option if you want to suppress the progress meter and non-error messages.
+    -C - This option forces scp to compresses the data as it is sent to the destination machine.
+    -r - This option tells scp to copy directories recursively.
+
+ssh-keygen -t rsa to make ssh key
+ssh-copy-id user@ip  top copy id to host
+
+
